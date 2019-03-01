@@ -22,6 +22,12 @@ namespace Game
 
         public void Move()
         {
+              if(GameScreen.spaceDown == true)
+            {
+                y = y + downSpeed;
+                GameScreen.spaceDown = false;
+            }
+
             y = y - upSpeed;
         }
 

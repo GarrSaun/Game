@@ -10,25 +10,14 @@ using System.Windows.Forms;
 
 namespace Game
 {
-    public partial class GameOver : UserControl
+    public partial class TitleScreen : UserControl
     {
-        public GameOver()
+        public TitleScreen()
         {
             InitializeComponent();
-
-            newHighScoreLabel.Visible = false;
-            scoreLabel.Text += " " + Form1.score;
-
-            if (Form1.score > Form1.highScore)
-            {
-                Form1.highScore = Form1.score;
-                newHighScoreLabel.Visible = true;
-            }
-
-            Form1.score = 0;
         }
 
-        private void restartButton_Click(object sender, EventArgs e)
+        private void playButton_Click(object sender, EventArgs e)
         {
             Form f = this.FindForm();
             f.Controls.Remove(this);

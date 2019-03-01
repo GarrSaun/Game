@@ -12,11 +12,14 @@ namespace Game
 {
     public partial class Form1 : Form
     {
+        public static int score;
+        public static int highScore = 0;
+
         public Form1()
         {
             InitializeComponent();
-            GameScreen gs = new GameScreen();
-            this.Controls.Add(gs);
+            TitleScreen ts = new TitleScreen();
+            this.Controls.Add(ts);
         }
 
     }
