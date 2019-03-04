@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.restartButton = new System.Windows.Forms.Button();
-            this.exitButton = new System.Windows.Forms.Button();
+            this.backButton = new System.Windows.Forms.Button();
             this.gameoverLabel = new System.Windows.Forms.Label();
             this.newHighScoreLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,15 +47,16 @@
             this.restartButton.UseVisualStyleBackColor = true;
             this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
             // 
-            // exitButton
+            // backButton
             // 
-            this.exitButton.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(239, 404);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(111, 52);
-            this.exitButton.TabIndex = 1;
-            this.exitButton.Text = "Exit";
-            this.exitButton.UseVisualStyleBackColor = true;
+            this.backButton.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backButton.Location = new System.Drawing.Point(239, 404);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(111, 52);
+            this.backButton.TabIndex = 1;
+            this.backButton.Text = "Back to Menu";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // gameoverLabel
             // 
@@ -71,10 +72,11 @@
             // 
             this.newHighScoreLabel.AutoSize = true;
             this.newHighScoreLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newHighScoreLabel.Location = new System.Drawing.Point(244, 135);
+            this.newHighScoreLabel.Location = new System.Drawing.Point(224, 154);
             this.newHighScoreLabel.Name = "newHighScoreLabel";
-            this.newHighScoreLabel.Size = new System.Drawing.Size(0, 16);
+            this.newHighScoreLabel.Size = new System.Drawing.Size(135, 16);
             this.newHighScoreLabel.TabIndex = 3;
+            this.newHighScoreLabel.Text = "New High Score!";
             // 
             // label1
             // 
@@ -104,7 +106,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.newHighScoreLabel);
             this.Controls.Add(this.gameoverLabel);
-            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.restartButton);
             this.Name = "GameOver";
             this.Size = new System.Drawing.Size(600, 800);
@@ -116,7 +118,7 @@
         #endregion
 
         private System.Windows.Forms.Button restartButton;
-        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label gameoverLabel;
         private System.Windows.Forms.Label newHighScoreLabel;
         private System.Windows.Forms.Label label1;

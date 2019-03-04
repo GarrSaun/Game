@@ -36,5 +36,14 @@ namespace Game
             f.Controls.Add(gs);
             this.Dispose();
         }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
+            TitleScreen ts = new TitleScreen();
+            f.Controls.Add(ts);
+            this.Dispose();
+        }
     }
 }

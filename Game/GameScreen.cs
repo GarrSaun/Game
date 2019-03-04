@@ -14,6 +14,7 @@ namespace Game
     {
         public static bool spaceDown;
         const int Thick = 100;
+        int count;
         Player p;
         Boulder b;
 
@@ -26,6 +27,7 @@ namespace Game
         public GameScreen()
         {
             InitializeComponent();
+            DoubleBuffered = true;
             OnStart();
         }
 
@@ -50,16 +52,26 @@ namespace Game
 
         public void OnStart()
         {
-            p = new Player(this.Width/2 - 20, 200, 20, 5, 25);
+            p = new Player(this.Width/2 - 20, 200, 20, 3, 30);
             b = new Boulder(this.Width / 2 - Thick / 2, 50, Thick);
+            count = 0;
             gameTimer.Enabled = true;
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            p.Move();
+            if (p.y <= this.Height)
+            {
+                p.Move();
+            }
             Form1.score++;
+            count++;
             Refresh();
+
+            if (count %200 == 0)
+            {
+                p.upSpeed++;
+            }
 
             if (p.Collision(b))
             {
@@ -69,6 +81,7 @@ namespace Game
                 f.Controls.Remove(this);
                 GameOver go = new GameOver();
                 f.Controls.Add(go);
+                this.Dispose();
                 return;
             }
         }
