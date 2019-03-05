@@ -10,14 +10,16 @@ namespace Game
     class Player
     {
         public int x, y, size, upSpeed, downSpeed;
+        public Color colour;
 
-        public Player(int _x, int _y, int _size, int _upSpeed, int _downSpeed)
+        public Player(int _x, int _y, int _size, int _upSpeed, int _downSpeed, Color _colour)
         {
             x = _x;
             y = _y;
             size = _size;
             upSpeed = _upSpeed;
             downSpeed = _downSpeed;
+            colour = _colour;
         }
 
         public void Move()
