@@ -28,10 +28,9 @@ namespace Game
             InitializeComponent();
             DoubleBuffered = true;
             OnStart();
-
-            
-
         }
+
+
         private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             switch (e.KeyCode)
@@ -42,7 +41,6 @@ namespace Game
                 case Keys.Escape:
                     escapeDown = true;
                     break;
-
             }
         }
         private void GameScreen_KeyUp(object sender, KeyEventArgs e)
@@ -104,6 +102,7 @@ namespace Game
             f.Controls.Remove(this);
             GameOver go = new GameOver();
             f.Controls.Add(go);
+            go.Location = new Point((f.Width - go.Width) / 2, (f.Height - go.Height) / 2);
             this.Dispose();
             return;
         }
@@ -118,10 +117,9 @@ namespace Game
             //Draw player
             e.Graphics.FillRectangle(new SolidBrush(p.colour), p.x, p.y, p.size, p.size);
             //Score
-            e.Graphics.DrawString("Score: " + Form1.score, scoreFont, scoreBrush, 500, 20);
-
+            e.Graphics.DrawString("Score: " + Form1.score, scoreFont, scoreBrush, 500, 60);
         }
 
-       
+
     }
 }

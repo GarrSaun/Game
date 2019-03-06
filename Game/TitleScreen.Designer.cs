@@ -38,7 +38,7 @@
             // playButton
             // 
             this.playButton.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playButton.Location = new System.Drawing.Point(234, 311);
+            this.playButton.Location = new System.Drawing.Point(234, 494);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(111, 52);
             this.playButton.TabIndex = 1;
@@ -50,7 +50,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(200, 150);
+            this.label1.Location = new System.Drawing.Point(208, 212);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 29);
             this.label1.TabIndex = 2;
@@ -59,7 +59,7 @@
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(234, 387);
+            this.exitButton.Location = new System.Drawing.Point(234, 568);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(111, 52);
             this.exitButton.TabIndex = 3;
@@ -69,12 +69,12 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Game.Properties.Resources.indy;
+            this.pictureBox1.BackgroundImage = global::Game.Properties.Resources.boulder;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(205, 193);
+            this.pictureBox1.Location = new System.Drawing.Point(169, 270);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 92);
+            this.pictureBox1.Size = new System.Drawing.Size(259, 149);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -88,7 +88,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.playButton);
             this.Name = "TitleScreen";
-            this.Size = new System.Drawing.Size(600, 800);
+            this.Size = new System.Drawing.Size(600, 1000);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

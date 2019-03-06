@@ -39,7 +39,7 @@
             // restartButton
             // 
             this.restartButton.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.restartButton.Location = new System.Drawing.Point(239, 327);
+            this.restartButton.Location = new System.Drawing.Point(239, 486);
             this.restartButton.Name = "restartButton";
             this.restartButton.Size = new System.Drawing.Size(111, 52);
             this.restartButton.TabIndex = 0;
@@ -50,7 +50,7 @@
             // backButton
             // 
             this.backButton.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(239, 404);
+            this.backButton.Location = new System.Drawing.Point(239, 557);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(111, 52);
             this.backButton.TabIndex = 1;
@@ -62,7 +62,7 @@
             // 
             this.gameoverLabel.AutoSize = true;
             this.gameoverLabel.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameoverLabel.Location = new System.Drawing.Point(222, 93);
+            this.gameoverLabel.Location = new System.Drawing.Point(234, 264);
             this.gameoverLabel.Name = "gameoverLabel";
             this.gameoverLabel.Size = new System.Drawing.Size(148, 29);
             this.gameoverLabel.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             this.newHighScoreLabel.AutoSize = true;
             this.newHighScoreLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newHighScoreLabel.Location = new System.Drawing.Point(224, 154);
+            this.newHighScoreLabel.Location = new System.Drawing.Point(236, 325);
             this.newHighScoreLabel.Name = "newHighScoreLabel";
             this.newHighScoreLabel.Size = new System.Drawing.Size(135, 16);
             this.newHighScoreLabel.TabIndex = 3;
@@ -91,7 +91,7 @@
             // 
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLabel.Location = new System.Drawing.Point(236, 222);
+            this.scoreLabel.Location = new System.Drawing.Point(248, 393);
             this.scoreLabel.Name = "scoreLabel";
             this.scoreLabel.Size = new System.Drawing.Size(96, 16);
             this.scoreLabel.TabIndex = 5;
@@ -109,7 +109,7 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.restartButton);
             this.Name = "GameOver";
-            this.Size = new System.Drawing.Size(600, 800);
+            this.Size = new System.Drawing.Size(600, 1000);
             this.ResumeLayout(false);
             this.PerformLayout();
 

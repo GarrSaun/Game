@@ -15,12 +15,21 @@ namespace Game
         public static int score;
         public static int highScore = 0;
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.TopMost = true;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+            TitleScreen ts = new TitleScreen();
+            this.Controls.Add(ts);
+            ts.Location = new Point((this.Width - ts.Width) / 2, (this.Height - ts.Height) / 2);
+        }
+
         public Form1()
         {
             InitializeComponent();
-            TitleScreen ts = new TitleScreen();
-            this.Controls.Add(ts);
         }
+
 
     }
 }

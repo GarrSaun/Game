@@ -63,9 +63,9 @@ namespace Game.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap indy {
+        internal static System.Drawing.Bitmap boulder {
             get {
-                object obj = ResourceManager.GetObject("indy", resourceCulture);
+                object obj = ResourceManager.GetObject("boulder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
