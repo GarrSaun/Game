@@ -31,16 +31,19 @@ namespace Game
 
         private void GameScreen_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Space)
+            //Move the player unless doing so would take them out of bounds
+            if (e.KeyChar == (char)Keys.Space && p.y <= this.Height - p.size)
             {
                 p.MoveDown();
             }
+
+            //Forfeit if escape is pressed
             if (e.KeyChar == (char)Keys.Escape)
             {
                 GameOver();
             }
         }
-
+        //Allow player to move again after space is released
         private void GameScreen_KeyUp(object sender, KeyEventArgs e)
         {
             ready = true;
@@ -56,12 +59,11 @@ namespace Game
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            //Move the player unless doing so would take them out of bounds
-            if (p.y <= this.Height - p.size)
-            {
-                p.MoveUp();
-            }
-            else
+            //Constantly move the player up
+            p.MoveUp();
+
+            //Stop the player from going out of bounds
+            if (p.y > this.Height - p.size)
             {
                 p.y = this.Height - p.size;
             }
