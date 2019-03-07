@@ -17,6 +17,7 @@ namespace Game
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Cursor.Hide();
             this.TopMost = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;

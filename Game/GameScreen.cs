@@ -12,8 +12,7 @@ namespace Game
 {
     public partial class GameScreen : UserControl
     {
-        public static bool spaceDown;
-        bool escapeDown;
+        public static bool ready;
         const int Thick = 100;
         int count;
         Player p;
@@ -30,30 +29,21 @@ namespace Game
             OnStart();
         }
 
-
-        private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        private void GameScreen_KeyPress(object sender, KeyPressEventArgs e)
         {
-            switch (e.KeyCode)
+            if (e.KeyChar == (char)Keys.Space)
             {
-                case Keys.Space:
-                    spaceDown = true;
-                    break;
-                case Keys.Escape:
-                    escapeDown = true;
-                    break;
+                p.MoveDown();
+            }
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                GameOver();
             }
         }
+
         private void GameScreen_KeyUp(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
-            {
-                case Keys.Space:
-                    spaceDown = false;
-                    break;
-                case Keys.Escape:
-                    escapeDown = false;
-                    break;
-            }
+            ready = true;
         }
 
         public void OnStart()
@@ -66,29 +56,29 @@ namespace Game
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            //Move the player unless doing so would take them out of bounds
             if (p.y <= this.Height - p.size)
             {
-                p.Move();
+                p.MoveUp();
             }
-            else //Stops user from glitching out of bounds
+            else
             {
                 p.y = this.Height - p.size;
             }
+
+            //Increase score
             Form1.score++;
             count++;
             Refresh();
 
+            //Increase speed every 200 ticks
             if (count % 200 == 0)
             {
                 p.upSpeed++;
             }
 
+            //Lose if player collides with boulder
             if (p.Collision(b))
-            {
-                GameOver();
-            }
-
-            if (escapeDown == true)
             {
                 GameOver();
             }

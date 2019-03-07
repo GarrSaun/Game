@@ -22,14 +22,17 @@ namespace Game
             colour = _colour;
         }
 
-        public void Move()
+        public void MoveDown()
         {
-              if(GameScreen.spaceDown == true)
+              if(GameScreen.ready == true)
             {
                 y = y + downSpeed;
-                GameScreen.spaceDown = false;
+                GameScreen.ready = false;
             }
+        }
 
+        public void MoveUp()
+        {
             y = y - upSpeed;
         }
 
