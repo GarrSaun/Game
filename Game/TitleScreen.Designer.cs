@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.playButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.Button();
+            this.subLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tutorialButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,26 +48,36 @@
             this.playButton.UseVisualStyleBackColor = true;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
-            // label1
+            // titleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(208, 212);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 29);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Indiana Jones";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Mongolian Baiti", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(208, 212);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(178, 29);
+            this.titleLabel.TabIndex = 2;
+            this.titleLabel.Text = "Indiana Jones";
             // 
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(234, 568);
+            this.exitButton.Location = new System.Drawing.Point(234, 644);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(111, 52);
             this.exitButton.TabIndex = 3;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // subLabel
+            // 
+            this.subLabel.AutoSize = true;
+            this.subLabel.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subLabel.Location = new System.Drawing.Point(220, 241);
+            this.subLabel.Name = "subLabel";
+            this.subLabel.Size = new System.Drawing.Size(148, 14);
+            this.subLabel.TabIndex = 5;
+            this.subLabel.Text = "The Movie: The Game";
             // 
             // pictureBox1
             // 
@@ -78,14 +90,27 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // tutorialButton
+            // 
+            this.tutorialButton.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tutorialButton.Location = new System.Drawing.Point(234, 568);
+            this.tutorialButton.Name = "tutorialButton";
+            this.tutorialButton.Size = new System.Drawing.Size(111, 52);
+            this.tutorialButton.TabIndex = 6;
+            this.tutorialButton.Text = "How to Play";
+            this.tutorialButton.UseVisualStyleBackColor = true;
+            this.tutorialButton.Click += new System.EventHandler(this.tutorialButton_Click);
+            // 
             // TitleScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PeachPuff;
+            this.Controls.Add(this.tutorialButton);
+            this.Controls.Add(this.subLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.exitButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.playButton);
             this.Name = "TitleScreen";
             this.Size = new System.Drawing.Size(600, 1000);
@@ -98,8 +123,10 @@
         #endregion
 
         private System.Windows.Forms.Button playButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label subLabel;
+        private System.Windows.Forms.Button tutorialButton;
     }
 }

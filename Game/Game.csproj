@@ -74,6 +74,12 @@
     <Compile Include="TitleScreen.Designer.cs">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="TutorialScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TutorialScreen.Designer.cs">
+      <DependentUpon>TutorialScreen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,9 @@
     <EmbeddedResource Include="TitleScreen.resx">
       <DependentUpon>TitleScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TutorialScreen.resx">
+      <DependentUpon>TutorialScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,6 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\boulder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scream_male.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

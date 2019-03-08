@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Name: Indiana Jones: The Movie: The Game
+//Author: Garrett Saunders
+//Date: 03/08/2019
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -7,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Game
 {
@@ -21,6 +26,8 @@ namespace Game
         Brush wallBrush = new SolidBrush(Color.Tan);
         Brush scoreBrush = new SolidBrush(Color.Black);
         Font scoreFont = new Font("Mongolian Baiti", 12);
+
+        SoundPlayer scream = new SoundPlayer(Properties.Resources.scream);
 
         public GameScreen()
         {
@@ -88,6 +95,7 @@ namespace Game
 
         public void GameOver()
         {
+            scream.Play();
             gameTimer.Enabled = false;
 
             Form f = this.FindForm();
@@ -108,7 +116,7 @@ namespace Game
             e.Graphics.FillRectangle(wallBrush, this.Width - Thick, 0, Thick, this.Height);
             //Draw player
             e.Graphics.FillRectangle(new SolidBrush(p.colour), p.x, p.y, p.size, p.size);
-            //Score
+            //Draw Score
             e.Graphics.DrawString("Score: " + Form1.score, scoreFont, scoreBrush, 500, 60);
         }
 

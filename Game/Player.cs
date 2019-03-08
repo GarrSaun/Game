@@ -22,6 +22,7 @@ namespace Game
             colour = _colour;
         }
 
+        //Move the player away from the boulder once per press of space
         public void MoveDown()
         {
               if(GameScreen.ready == true)
@@ -31,11 +32,13 @@ namespace Game
             }
         }
 
+        //Constantly move the player towards the boulder
         public void MoveUp()
         {
             y = y - upSpeed;
         }
 
+        //Check if player has hit the boulder
         public Boolean Collision(Boulder b)
         {
 
