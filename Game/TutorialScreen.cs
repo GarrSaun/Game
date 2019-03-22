@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Name: Indiana Jones: The Movie: The Game
+//Author: Garrett Saunders
+//Date: 22/03/2019
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;

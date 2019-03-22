@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Name: Indiana Jones: The Movie: The Game
+//Author: Garrett Saunders
+//Date: 22/03/2019
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -7,7 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace Game
 {
@@ -30,17 +33,6 @@ namespace Game
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            //Write to Xml
-            XmlWriter writer = XmlWriter.Create("Resources/HighScore.xml");
-            writer.WriteStartElement("highScore");
-            foreach (int i in Form1.scoreList)
-            {
-                writer.WriteElementString("score", i.ToString());
-            }
-            writer.WriteEndElement();
-            writer.Close();
-
-            //Close
             Application.Exit();
         }
 

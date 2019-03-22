@@ -34,7 +34,7 @@
             this.newHighScoreLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.scoreLabel = new System.Windows.Forms.Label();
-            this.xmlLabel = new System.Windows.Forms.Label();
+            this.recordLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // restartButton
@@ -43,7 +43,7 @@
             this.restartButton.Location = new System.Drawing.Point(239, 486);
             this.restartButton.Name = "restartButton";
             this.restartButton.Size = new System.Drawing.Size(111, 52);
-            this.restartButton.TabIndex = 0;
+            this.restartButton.TabIndex = 1;
             this.restartButton.Text = "Play Again";
             this.restartButton.UseVisualStyleBackColor = true;
             this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
@@ -54,7 +54,7 @@
             this.backButton.Location = new System.Drawing.Point(239, 557);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(111, 52);
-            this.backButton.TabIndex = 1;
+            this.backButton.TabIndex = 2;
             this.backButton.Text = "Back to Menu";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.exitButton_Click);
@@ -98,22 +98,22 @@
             this.scoreLabel.TabIndex = 5;
             this.scoreLabel.Text = "Your Score:";
             // 
-            // xmlLabel
+            // recordLabel
             // 
-            this.xmlLabel.AutoSize = true;
-            this.xmlLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xmlLabel.Location = new System.Drawing.Point(248, 362);
-            this.xmlLabel.Name = "xmlLabel";
-            this.xmlLabel.Size = new System.Drawing.Size(100, 16);
-            this.xmlLabel.TabIndex = 6;
-            this.xmlLabel.Text = "High Score: ";
+            this.recordLabel.AutoSize = true;
+            this.recordLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.recordLabel.Location = new System.Drawing.Point(248, 362);
+            this.recordLabel.Name = "recordLabel";
+            this.recordLabel.Size = new System.Drawing.Size(95, 16);
+            this.recordLabel.TabIndex = 6;
+            this.recordLabel.Text = "High Score:";
             // 
             // GameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
-            this.Controls.Add(this.xmlLabel);
+            this.Controls.Add(this.recordLabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.newHighScoreLabel);
@@ -135,6 +135,6 @@
         private System.Windows.Forms.Label newHighScoreLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label scoreLabel;
-        private System.Windows.Forms.Label xmlLabel;
+        private System.Windows.Forms.Label recordLabel;
     }
 }
