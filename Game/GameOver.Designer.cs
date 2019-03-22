@@ -34,6 +34,7 @@
             this.newHighScoreLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.scoreLabel = new System.Windows.Forms.Label();
+            this.xmlLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // restartButton
@@ -97,11 +98,22 @@
             this.scoreLabel.TabIndex = 5;
             this.scoreLabel.Text = "Your Score:";
             // 
+            // xmlLabel
+            // 
+            this.xmlLabel.AutoSize = true;
+            this.xmlLabel.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xmlLabel.Location = new System.Drawing.Point(248, 362);
+            this.xmlLabel.Name = "xmlLabel";
+            this.xmlLabel.Size = new System.Drawing.Size(100, 16);
+            this.xmlLabel.TabIndex = 6;
+            this.xmlLabel.Text = "High Score: ";
+            // 
             // GameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Coral;
+            this.Controls.Add(this.xmlLabel);
             this.Controls.Add(this.scoreLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.newHighScoreLabel);
@@ -123,5 +135,6 @@
         private System.Windows.Forms.Label newHighScoreLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label scoreLabel;
+        private System.Windows.Forms.Label xmlLabel;
     }
 }

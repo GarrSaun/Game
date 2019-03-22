@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 
+
 namespace Game
 {
     public partial class GameScreen : UserControl
@@ -53,12 +54,12 @@ namespace Game
         //Allow player to move again after space is released
         private void GameScreen_KeyUp(object sender, KeyEventArgs e)
         {
-            ready = true;
+            p.ready = true;
         }
 
         public void OnStart()
         {
-            p = new Player(this.Width / 2 - 20, 200, 20, 3, 30, Color.IndianRed);
+            p = new Player(this.Width / 2 - 20, 200, 20, 3, 30, Color.IndianRed, true);
             b = new Boulder(this.Width / 2 - Thick / 2, 50, Thick, Color.Gray);
             count = 0;
             gameTimer.Enabled = true;

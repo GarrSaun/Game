@@ -61,10 +61,10 @@
             // exitButton
             // 
             this.exitButton.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitButton.Location = new System.Drawing.Point(234, 644);
+            this.exitButton.Location = new System.Drawing.Point(234, 610);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(111, 52);
-            this.exitButton.TabIndex = 3;
+            this.exitButton.TabIndex = 4;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
@@ -93,10 +93,10 @@
             // tutorialButton
             // 
             this.tutorialButton.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tutorialButton.Location = new System.Drawing.Point(234, 568);
+            this.tutorialButton.Location = new System.Drawing.Point(234, 552);
             this.tutorialButton.Name = "tutorialButton";
             this.tutorialButton.Size = new System.Drawing.Size(111, 52);
-            this.tutorialButton.TabIndex = 6;
+            this.tutorialButton.TabIndex = 2;
             this.tutorialButton.Text = "How to Play";
             this.tutorialButton.UseVisualStyleBackColor = true;
             this.tutorialButton.Click += new System.EventHandler(this.tutorialButton_Click);

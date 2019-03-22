@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Game
 {
@@ -29,6 +30,17 @@ namespace Game
 
         private void exitButton_Click(object sender, EventArgs e)
         {
+            //Write to Xml
+            XmlWriter writer = XmlWriter.Create("Resources/HighScore.xml");
+            writer.WriteStartElement("highScore");
+            foreach (int i in Form1.scoreList)
+            {
+                writer.WriteElementString("score", i.ToString());
+            }
+            writer.WriteEndElement();
+            writer.Close();
+
+            //Close
             Application.Exit();
         }
 
@@ -41,5 +53,6 @@ namespace Game
             ts.Location = new Point((f.Width - ts.Width) / 2, (f.Height - ts.Height) / 2);
             this.Dispose();
         }
+
     }
 }

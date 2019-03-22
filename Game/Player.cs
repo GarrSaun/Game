@@ -11,8 +11,9 @@ namespace Game
     {
         public int x, y, size, upSpeed, downSpeed;
         public Color colour;
+        public bool ready;
 
-        public Player(int _x, int _y, int _size, int _upSpeed, int _downSpeed, Color _colour)
+        public Player(int _x, int _y, int _size, int _upSpeed, int _downSpeed, Color _colour, bool _ready)
         {
             x = _x;
             y = _y;
@@ -20,15 +21,16 @@ namespace Game
             upSpeed = _upSpeed;
             downSpeed = _downSpeed;
             colour = _colour;
+            ready = _ready;
         }
 
         //Move the player away from the boulder once per press of space
         public void MoveDown()
         {
-              if(GameScreen.ready == true)
+              if(ready == true)
             {
                 y = y + downSpeed;
-                GameScreen.ready = false;
+                ready = false;
             }
         }
 
